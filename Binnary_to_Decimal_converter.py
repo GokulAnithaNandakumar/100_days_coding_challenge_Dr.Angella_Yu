@@ -1,4 +1,4 @@
-a=input("Enter a Binary Number: )
+a=input("Enter a Binary Number: ")
 a=a[::-1]
 b=len(a)-1
 sum=0
