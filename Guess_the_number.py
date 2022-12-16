@@ -11,8 +11,10 @@ print('''
 
 print("Welcome to the Number Guessing game!")
 print("I'm thinking of a number between 1 and 100")
+
 diff = input("Choose a difficulty.. Type 'easy' or 'hard': ")
 guess = 0
+
 if diff == "easy":
     guess = 10
     print("You have 10 attempts remaining to guess the number.")
