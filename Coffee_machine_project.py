@@ -1,7 +1,7 @@
 MENU = {
     "espresso": {
         "ingredients": {
-            "water": 50,  #50
+            "water": 50,
             "coffee": 18,
             "milk": 0,
         },
@@ -33,7 +33,6 @@ resources = {
 water=resources['water']
 milk=resources['milk']
 coffee=resources['coffee']
-
 money=0
 ing=True
 while True:
@@ -47,7 +46,6 @@ while True:
         print(f"Milk: {resources['milk']}")
         print(f"Coffee: {resources['coffee']}")
         print(f"Money: ${money}")
-
     else:
         for b in MENU:
             if b==c:
@@ -56,15 +54,12 @@ while True:
                         print(f"Sorry there is not enough {d}.")
                         ing=False
 
-
-
         if ing:
             q = int(input("Insert the number of quarters: "))
             d = int(input("Insert the number of dimes: "))
             n = int(input("Insert the number of nickels: "))
             p = int(input("Insert the number of pennies: "))
             l=[float(q*0.25),float(p*0.01),float(n*0.05),float(d*0.1)]
-
             cos=round(sum(l), 2)
             print(cos)
             for l in MENU:
@@ -75,33 +70,21 @@ while True:
                         print("Sorry that's not enough money. Money refunded.")
                     elif cos>=cor:
                         r=cos-cor
-                        money+=cos
-                        money-=r
+                        money+=cor
+
                         if r!=0:
                             print(f"Here is ${r} dollars in change.")
 
 
-                        money+=cos
-
-
                         if l==c:
+
                             a=MENU[l]['ingredients']['water']
                             q=int(a)
                             b=MENU[l]['ingredients']['coffee']
                             r=int(b)
-
                             y=MENU[l]['ingredients']['milk']
                             s=int(y)
                             resources['water']-=q
                             resources['coffee']-=r
                             resources['milk']-=s
-
                             print(f"Here is your {c}. Enjoy!")
-
-
-
-
-
-
-
-
