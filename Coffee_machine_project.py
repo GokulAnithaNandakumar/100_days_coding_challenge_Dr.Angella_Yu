@@ -34,11 +34,14 @@ water=resources['water']
 milk=resources['milk']
 coffee=resources['coffee']
 money=0
-
+list=["off","report","espresso","latte","cappuccino"]
 while True:
     ing=True
     z=input("What would you like? (espresso/latte/cappuccino):")
     c=z.lower()
+    if c not in list:
+        print("Enter a valid product.")
+        ing=False
     if c=="off":
        print("Thank you for shopping!")
        break
