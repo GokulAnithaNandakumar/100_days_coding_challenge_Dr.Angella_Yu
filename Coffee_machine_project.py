@@ -80,9 +80,7 @@ while True:
                         if r!=0:
                             print(f"Here is ${r} dollars in change.")
 
-
                         if l==c:
-
                             a=MENU[l]['ingredients']['water']
                             q=int(a)
                             b=MENU[l]['ingredients']['coffee']
