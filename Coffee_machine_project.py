@@ -2,8 +2,8 @@ MENU = {
     "espresso": {
         "ingredients": {
             "water": 50,
-            "coffee": 18,
             "milk": 0,
+            "coffee": 18,
         },
         "cost": 1.5,
     },
@@ -34,8 +34,9 @@ water=resources['water']
 milk=resources['milk']
 coffee=resources['coffee']
 money=0
-ing=True
+
 while True:
+    ing=True
     z=input("What would you like? (espresso/latte/cappuccino):")
     c=z.lower()
     if c=="off":
@@ -53,6 +54,7 @@ while True:
                     if int(MENU[c]['ingredients'][d])>int(resources[d]):
                         print(f"Sorry there is not enough {d}.")
                         ing=False
+                        break
 
         if ing:
             q = int(input("Insert the number of quarters: "))
